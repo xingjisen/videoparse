@@ -10,7 +10,7 @@
 
     <name>RuoYi-Vue-Plus</name>
     <url>https://gitee.com/dromara/RuoYi-Vue-Plus</url>
-    <description>Dromara RuoYi-Vue-Plus多租户管理系统</description>
+    <description>DownloadTheVideo.online</description>
 
     <properties>
         <revision>5.3.0</revision>
@@ -47,6 +47,10 @@
         <sms4j.version>3.3.3</sms4j.version>
         <!-- 限制框架中的fastjson版本 -->
         <fastjson.version>1.2.83</fastjson.version>
+        <!-- 用于解析User-Agent -->
+        <ua-parse.version>1.5.3</ua-parse.version>
+        <!-- 获取更多设备信息 -->
+        <nguyenq.version>1.14.0</nguyenq.version>
         <!-- 面向运行时的D-ORM依赖 -->
         <anyline.version>8.7.2-20250101</anyline.version>
         <!--工作流配置-->
@@ -330,6 +334,19 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- 用于解析User-Agent -->
+            <dependency>
+                <groupId>com.github.ua-parser</groupId>
+                <artifactId>uap-java</artifactId>
+                <version>${ua-parse.version}</version>
+            </dependency>
+            <!-- 获取更多设备信息 -->
+            <dependency>
+                <groupId>com.github.nguyenq</groupId>
+                <artifactId>device-detector</artifactId>
+                <version>${nguyenq.version}</version>
             </dependency>
 
             <dependency>

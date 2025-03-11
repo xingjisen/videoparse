@@ -1,0 +1,286 @@
+{
+  "header": {
+    "mode": {
+      "sepia": "Switch to Eye Protection Mode",
+      "light": "Switch to Light Mode"
+    },
+    "title": {
+      "TikTok": "TikTok",
+      "Instagram": "Instagram",
+      "Twitter": "Twitter",
+      "DouYin": "DouYin",
+      "KuaiShou": "KuaiShou"
+    }
+  },
+  "content": {
+    "title": "Download Videos/Extract Images from All Platforms",
+    "subTitle": "Free, Fast, No Login Required, Supports 100+ Platforms",
+    "TikTok": {
+      "title": "Download Videos/Extract Images from TikTok",
+      "subTitle": "The best TikTok video downloader, free to convert TikTok videos to high-quality MP4 or MP3 formats.",
+      "topLeft": "Supported TikTok Link Formats"
+    },
+    "Instagram": {
+      "title": "Instagram Video/Image Download",
+      "subTitle": "The best Instagram video/image downloader, free to download Instagram videos, Reels, IGTV, and photos.",
+      "topLeft": "Supported Instagram Link Formats"
+    },
+    "Twitter": {
+      "title": "Twitter Video/Audio/Image Download",
+      "subTitle": "The best Twitter video/audio/image downloader, free to download videos, audio, images, and GIFs from Twitter.",
+      "topLeft": "Supported Twitter Link Formats"
+    },
+    "DouYin": {
+      "title": "DouYin Video Download",
+      "subTitle": "The best DouYin video downloader, free to convert DouYin videos to high-quality MP4 or MP3 formats.",
+      "topLeft": "Supported DouYin Link Formats"
+    },
+    "KuaiShou": {
+      "title": "KuaiShou Video Downloader",
+      "subTitle": "Quickly and easily download high-quality KuaiShou videos with our easy-to-use downloader.",
+      "topLeft": "Best Video/Image Downloader",
+      "bottomLeft": "No Limits, No Login Required"
+    },
+    "input": {
+      "placeholder": "Paste Video/Image Link",
+      "button": "Submit"
+    },
+    "topLeft": "Best Video/Image Downloader",
+    "bottomLeft": "No Limits, No Login Required",
+    "rightTop": {
+      "one": "Copy the shareable video/album link",
+      "two": "Paste the link into the input box above",
+      "three": "Click the download button for video/audio/image"
+    },
+    "desc": {
+      "one": "Free to Use",
+      "oneSub": "Parse and download videos, audio, images, and more without any cost.",
+      "two": "No Limits",
+      "twoSub": "No restrictions on parsing and downloading services. Use as much as you need.",
+      "three": "No Registration Required",
+      "threeSub": "Directly use the service without registering an account or providing personal information.",
+      "four": "High-Quality Audio/Video",
+      "fourSub": "Download the highest quality videos by default, with options for HD, 1080P, 2K, and 4K."
+    },
+    "modal": {
+      "title": "Video List",
+      "subTitle": "Video/Image Title:",
+      "cover": "Cover",
+      "notVideoForm": "No available video format found",
+      "copySuccess": "Copied to clipboard",
+      "copyFail": "Copy failed",
+      "download": "Download",
+      "urlError": "the url is incorrect",
+      "videoColumns": {
+        "resolution": "Resolution",
+        "ext": "File Format",
+        "vcodec": "Video Format",
+        "acodec": "Audio Format",
+        "dynamicRange": "Video Dynamic Range",
+        "url": "URL",
+        "filesize": "File Size",
+        "download": "Download"
+      }
+    }
+  },
+  "AppMiddle": {
+    "title": "Supported Platforms",
+    "Facebook": "Facebook",
+    "Twitter": "Twitter",
+    "Instagram": "Instagram",
+    "Telegram": "Telegram",
+    "TikTok": "TikTok",
+    "9GAG": "9GAG",
+    "Mashable": "Mashable",
+    "Linkedin": "Linkedin",
+    "Likee": "Likee",
+    "Kwai": "Kwai",
+    "Imgur": "Imgur",
+    "Imdb": "Imdb",
+    "Ifunny": "Ifunny",
+    "Gaana": "Gaana",
+    "Flickr": "Flickr",
+    "Febspot": "Febspot",
+    "Espn": "Espn",
+    "Akillitv": "Akillitv",
+    "Bandcamp": "Bandcamp",
+    "Bitchute": "Bitchute",
+    "Blogger": "Blogger",
+    "Blutv": "Blutv",
+    "Buzzfeed": "Buzzfeed",
+    "Dailymotion": "Dailymotion"
+  },
+  "Footer": {
+    "msg1": "This website is for personal use only. Downloading copyrighted materials is strictly prohibited. By using this site, you agree to our",
+    "msg2": "Terms of Service",
+    "msg3": ". You are solely responsible for any copyright infringement or misuse of this website.",
+    "faq": "FAQ",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "copyright": "Copyright Policy",
+    "contact": "Contact Us",
+    "ft": "All Rights Reserved."
+  },
+  "FooterContent": {
+    "oneTit": "What is DownloadTheVideo.online?",
+    "oneSub": "DownloadTheVideo.online is a powerful online tool that allows users to download their favorite videos from over 100 platforms, including Facebook, VK, Twitter, TikTok, and Instagram.",
+    "twoTit": "Which platforms does DownloadTheVideo.online support?",
+    "twoSub": "DownloadTheVideo.online supports over 100 platforms, including social networks like Facebook, Twitter, Instagram, TikTok, and LinkedIn, as well as video platforms like Vimeo and Dailymotion.",
+    "threeTit": "Is DownloadTheVideo.online free to use?",
+    "threeSub": "Yes, DownloadTheVideo.online is completely free. We believe in making digital content accessible to everyone without any cost.",
+    "fourTit": "Is it legal to download videos using DownloadTheVideo.online?",
+    "fourSub": "It depends on the video and its copyright status. Users are responsible for respecting the copyright policies of the platforms and content creators.",
+    "fiveTit": "What should I do if the video download doesn't start?",
+    "fiveSub": "First, check your internet connection. If the issue persists, try refreshing the page or restarting your browser.",
+    "sixTit": "What video quality can I expect?",
+    "sixSub": "The quality of the downloaded video depends on the original upload. If the original supports HD or 4K, you can download it in the same quality."
+  },
+  "faq": {
+    "title": "FAQ",
+    "titleSub": "Here you can find answers to common questions.",
+    "content": {
+      "oneTitle": "Is DownloadTheVideo.online free to use?",
+      "oneContent": "Yes, DownloadTheVideo.online is completely free and will remain free. However, we use ads to cover the costs of running and maintaining the service.",
+      "twoTitle": "Can I download videos from YouTube?",
+      "twoContent": "No, downloading videos from YouTube is no longer supported.",
+      "threeTitle": "Which operating systems are supported?",
+      "threeContent": "DownloadTheVideo.online runs online and supports all operating systems, including Windows, macOS, Linux, Android, and others.",
+      "fourTitle": "Can I use DownloadTheVideo.online on mobile and tablet devices?",
+      "fourContent": "Yes, DownloadTheVideo.online works on devices of any screen size, including phones and tablets.",
+      "fiveTitle": "Which browsers are supported?",
+      "fiveContent": "We only support modern browsers. For the best experience, please use the latest version of your preferred browser.",
+      "sixTitle": "What should I do if I encounter an error?",
+      "sixContent": "First, ensure the link is correct and the video is not private or requires login. If the issue persists, contact us.",
+      "sevenTitle": "Can I download only the audio from a video?",
+      "sevenContent": "Some websites provide audio files. If no audio download button is available, you can convert the video to formats like MP3, M4A, WAV, or AAC.",
+      "eightTitle": "Can I download copyrighted materials?",
+      "eightContent": {
+        "one": "No, you cannot use DownloadTheVideo.online to download copyrighted materials. Please refer to our",
+        "two": "Terms of Service",
+        "three": "for more information."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: February 10, 2025.",
+    "introduction": "By continuing to use this website, you agree to these Terms of Service.",
+    "sections": {
+      "title": "DownloadTheVideo.online Usage Terms",
+      "content": {
+        "one": "This website is for personal use only.",
+        "two": "You may only use our website as a recording service within legal limits.",
+        "three": "You may not use our service to download or convert any copyrighted materials.",
+        "four": "You are solely responsible for any misuse of our services and copyright infringement.",
+        "five": "You are responsible for reading the terms of service of the websites from which you download media.",
+        "six": "We are not responsible for any misuse of our services or damages resulting from their use.",
+        "seven": "We reserve the right to modify these terms at any time.",
+        "eight": "By continuing to use this website, you accept these Terms of Service."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: February 10, 2025.",
+    "sections": {
+      "overview": {
+        "title": "Overview",
+        "content": {
+          "one": "You can use DownloadTheVideo.online anonymously without providing personal information. However, like most websites, we collect non-personal information to better understand how visitors use our site.",
+          "two": "We also collect potentially personal information, such as your IP address, to prevent misuse and ensure our services are available to everyone.",
+          "three": "We do not store personal information on our servers unless necessary for the operation of our services, and we do not share your personal information with anyone."
+        }
+      },
+      "autoCollectedInfo": {
+        "title": "Automatically Collected Information",
+        "content": {
+          "intro": "Information collected by DownloadTheVideo.online and third-party services:",
+          "ip": "IP Address",
+          "browserType": "Browser Type",
+          "dateTime": "Date and Time of Request",
+          "referrer": "Referring Website",
+          "language": "Language Preference"
+        }
+      },
+      "cookie": {
+        "title": "Cookies",
+        "content": {
+          "one": "Cookies are text files stored on your computer. We use cookies to improve your experience, enhance our services, and personalize ads and content.",
+          "two": {
+            "text": "We use Google Analytics to collect anonymous usage information. Google Analytics may use tracking cookies to collect data on browsers, operating systems, and navigation.",
+            "link": {
+              "text": "Google Analytics opt-out browser plugin",
+              "url": "https://chromewebstore.google.com/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en"
+            }
+          },
+          "three": {
+            "text": "We use PropellerAds to serve ads. PropellerAds uses cookies to deliver relevant ads. PropellerAds cookies do not collect personal information. You can learn more on the privacy policy page or opt out using this page.",
+            "hidden": true
+          }
+        }
+      },
+      "links": {
+        "title": "Links",
+        "content": {
+          "one": "This website may contain links to other sites. We are not responsible for their content or privacy policies. Please read the privacy policies of any site that collects personal information."
+        }
+      },
+      "policyChanges": {
+        "title": "Privacy Policy Changes",
+        "content": {
+          "one": "DownloadTheVideo.online may change its privacy policy as needed. Significant changes will be announced on the homepage. By continuing to use the site, you accept these changes."
+        }
+      }
+    }
+  },
+  "copyright": {
+    "title": "Copyright Policy",
+    "lastUpdated": "Last Updated: February 10, 2025.",
+    "content": {
+      "points": {
+        "one": "We respect the intellectual property rights of others.",
+        "two": {
+          "text": "Copyright infringement violates our",
+          "title": "Terms of Service",
+          "symbol": "."
+        },
+        "three": "Users may not download or convert any copyrighted materials.",
+        "four": "We may remove content that we believe infringes on intellectual property rights.",
+        "five": "We comply with the Digital Millennium Copyright Act (DMCA), U.S. Code, Title 17, Section 512(c)(2).",
+        "six": {
+          "text": "If you believe this site infringes your copyright, please email us at",
+          "note": "to ensure the issue is addressed."
+        },
+        "seven": "To be effective, your notice must include:",
+        "requirements": {
+          "one": "A physical or electronic signature of the copyright owner or authorized representative.",
+          "two": "Identification of the copyrighted work claimed to be infringed, including a description and URL.",
+          "three": "Identification of the material to be removed or disabled, with enough information to locate it.",
+          "four": "Your contact information, including address, phone number, and email.",
+          "five": "A statement that you believe the use of the material is not authorized by the copyright owner.",
+          "six": "A statement that the information in the notice is accurate, under penalty of perjury.",
+          "seven": "All invalid or unrelated notices will not receive a response or action."
+        },
+        "eight": "All invalid or unrelated notices will not receive a response or action."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "titleSub": "Please send us your feedback or questions, and we will respond as soon as possible.",
+    "provider": {
+      "one": "Contact form powered by",
+      "two": "Formspree.io",
+      "three": "."
+    },
+    "email": "Your Email",
+    "theme": "Subject",
+    "url": "Video Link (Optional)",
+    "msg": "Message",
+    "button": "Send"
+  },
+  "fetch": {
+    "errorTitle": "error",
+    "error": "sorry we cant get your request"
+  }
+}

@@ -120,6 +120,7 @@ security:
     - /*/api-docs
     - /*/api-docs/**
     - /warm-flow-ui/token-name
+    - /video/**
 
 # 多租户配置
 tenant:
@@ -168,7 +169,6 @@ mybatis-encryptor:
   # 公私钥 非对称算法的公私钥 如：SM2，RSA
   publicKey:
   privateKey:
-
 # api接口加密
 api-decrypt:
   # 是否开启全局接口加密

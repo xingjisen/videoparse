@@ -12,15 +12,20 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
+    "@ant-design-vue/nuxt": "^1.4.6",
     "@iconify-json/lucide": "^1.2.26",
     "@iconify-json/simple-icons": "^1.2.24",
     "@nuxt/content": "^3.1.1",
     "@nuxt/image": "^1.9.0",
-    "@nuxt/ui-pro": "3.0.0-alpha.13",
-    "nuxt": "^3.15.2"
+    "@nuxt/ui-pro": "^1.7.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "ant-design-vue": "^4.2.6",
+    "nuxt": "^3.15.2",
+    "qs": "^6.14.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.0.1",
+    "@nuxtjs/proxy": "^2.1.0",
     "eslint": "^9.20.1",
     "sass-embedded": "^1.85.0",
     "typescript": "^5.7.3",

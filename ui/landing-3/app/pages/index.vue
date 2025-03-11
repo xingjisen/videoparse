@@ -1,8 +1,188 @@
 <script setup lang="ts">
-const link = ref('')
-const handleSubmit = (()=>{
-  console.log(`代码行🚀: link ~ -> `,link.value)
+
+import {parsing} from "~~/api/video";
+import {CopyOutlined} from "#components";
+
+const videoData = ref([])
+const videoColumns = ref([
+  {
+    title: '分辨率',
+    dataIndex: 'resolution',
+    key: 'resolution',
+    width: 100
+  },
+  {
+    title: '格式',
+    dataIndex: 'ext',
+    key: 'ext',
+    width: 80
+  },
+  {
+    title: 'cookies',
+    dataIndex: 'cookies',
+    key: 'cookies',
+    ellipsis: true,
+    width: 100,
+    customCell: (record) => {
+      return {
+        style: {cursor: 'pointer'},
+        onClick: () => copyToClipboard(record.cookies),
+      };
+    },
+    customRender: ({text}) => h('div', {
+      style: 'display: flex; align-items: center; gap: 8px;'
+    }, [
+      h('span', text),
+      h(CopyOutlined, {
+        style: 'color: #1890ff; margin-left: 8px;',
+        onClick: (e) => {
+          e.stopPropagation();
+          copyToClipboard(text);
+        }
+      })
+    ])
+  },
+  {
+    title: '地址',
+    dataIndex: 'url',
+    key: 'url',
+    ellipsis: true,
+    customCell: (record) => {
+      return {
+        style: {cursor: 'pointer'},
+        onClick: () => copyToClipboard(record.url),
+      };
+    },
+    customRender: ({text}) => h('div', {
+      style: 'display: flex; align-items: center; gap: 8px;'
+    }, [
+      h('span', text),
+      h(CopyOutlined, {
+        style: 'color: #1890ff; margin-left: 8px;',
+        onClick: (e) => {
+          e.stopPropagation();
+          copyToClipboard(text);
+        }
+      })
+    ])
+  },
+  {
+    title: '文件大小',
+    dataIndex: 'filesize',
+    key: 'filesize',
+    customRender: ({text, record, index, column}) => {
+      return `${(text / 1024 / 1024).toFixed(2)}MB`
+    },
+  },
+])
+const copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    message.success('已复制到剪切板');
+  } catch (err) {
+    message.error('复制失败: ' + err);
+  }
+};
+
+const link = ref('https://www.tiktok.com/@bombo_ai/video/7451733555887164694?is_from_webapp=1&sender_device=pc&web_id=7473494785737901614')
+const open = ref(false)
+const isBtn = ref(false)
+const handleSubmit = (async () => {
+  isBtn.value = true
+  //TODO 解析视频根据返回结果打开视频分辨率选择对话框
+  const data = await parsing({url: link.value, type: 'tiktok'})
+  if (data.data != null) {
+    videoData.value = JSON.parse(data.data)
+    open.value = true
+  }
+  console.log("videoData.value", videoData.value)
+  isBtn.value = false
+  // videoData.value = [
+  //   {
+  //     name: '视频',
+  //     icon: 'i-simple-icons-youtube',
+  //     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  //   },
+  //   {
+  //     name: '音频',
+  //     icon: 'i-simple-icons-spotify',
+  //     url: 'https://open.spotify.com/track/4uZQJYjQYz9Y9Y0X0Q0Q0Q?si=0a0a0a0a0a0a0a0a',
+  //   }]
+  // 下载视频流
+  /*try {
+    // 使用 $fetch 发送请求
+    const {data} = await useFetch('http://localhost:8080/video/download1?url=' + link.value, {
+      method: 'GET',
+      headers: {
+        'Accept': 'video/mp4',
+      },
+      responseType: 'blob',
+    });
+    console.log("aaa", data.value, URL)
+    const videoUrl = URL.createObjectURL(data.value);
+
+    const linkElement = document.createElement('a');
+    linkElement.href = videoUrl;
+    linkElement.download = 'video.mp4';
+    document.body.appendChild(linkElement);
+    linkElement.click();
+
+    // 清理
+    document.body.removeChild(linkElement);
+    URL.revokeObjectURL(videoUrl);
+
+  } catch (error) {
+    console.error("下载视频时出错", error);
+  }*/
 })
+
+
+const handleDownload = async () => {
+  try {
+    const format = videoData.value.formats?.[0]
+    if (!format) throw new Error('未找到可用视频格式');
+
+    // 解析鉴权信息
+    const {url, http_headers, cookies} = format;
+    console.log("formatformat", url, http_headers, cookies)
+
+    const proxyUrl = `http://localhost/proxy/${url}`;
+    // 合并 Headers（优先使用 http_headers）
+    const headers = {
+      ...http_headers,
+      Cookie: cookies.split('; ').join('; '),
+      Origin: 'https://www.tiktok.com',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      Referer: 'https://www.tiktok.com/',
+      'Content-Disposition': 'attachment; filename="video.mp4"',
+    };
+
+    console.log("headers", headers)
+
+    // 发送请求
+    const response = await useFetch(proxyUrl, {
+      // mode: 'no-cors',
+      method: 'GET',
+      ...headers,
+      // credentials: 'include', // 允许携带 Cookie
+      credentials: 'omit', // 允许携带 Cookie
+    });
+
+    // 处理二进制流
+    const blob = await response.blob();
+    const downloadUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = downloadUrl;
+    a.download = `video_${Date.now()}.mp4`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(downloadUrl);
+    document.body.removeChild(a);
+  } catch (error) {
+    console.error('下载失败:', error);
+    alert('下载失败，请检查控制台详情');
+  }
+}
 </script>
 
 <template>
@@ -11,8 +191,8 @@ const handleSubmit = (()=>{
     <div class="sub-heading">免费、快速、无需登录，支持100多个平台</div>
     <div class="input-group">
       <UButtonGroup orientation="horizontal">
-        <UInput class="input-sty" v-model="link" size="xl" color="neutral" variant="outline" placeholder="请粘贴视频/图像链接" />
-        <UButton class="input-btn" :style="link?'cursor: pointer;':''" :disabled="!link" color="neutral" variant="subtle" @click="handleSubmit" label="提交" />
+        <UInput class="input-sty" v-model="link" size="xl" color="neutral" variant="outline" placeholder="请粘贴视频/图像链接"/>
+        <UButton class="input-btn" :style="link?'cursor: pointer;':''" :disabled="!link" :loading="isBtn" color="neutral" variant="subtle" @click="handleSubmit" label="提交"/>
       </UButtonGroup>
     </div>
     <div class="method-sty">
@@ -57,14 +237,31 @@ const handleSubmit = (()=>{
         </li>
       </ul>
     </div>
+
+
+    <a-modal v-model:open="open" title="视频列表" width="70%" maxWidth="80%" :footer=false>
+      <div style="display: flex;justify-content: space-around">
+        <div style="width: 48%;">
+          <div><span style="font-weight: bold;">视频/图像标题: </span>{{ videoData.title }}</div>
+          <a-card title="封面" style="width: 100%;margin-top: 20px">
+            <img :src="videoData.thumbnail" alt="" srcset="">
+          </a-card>
+          <button @click="handleDownload">下载视频（最佳质量）</button>
+        </div>
+        <div style="width: 48%;">
+          <a-table :pagination="false" :dataSource="videoData.formats" :columns="videoColumns" bordered style="width:100%;"/>
+        </div>
+      </div>
+    </a-modal>
   </div>
 </template>
 
 <style scoped lang="scss">
-.body{
+.body {
   display: flex;
   flex-direction: column;
-  .heading{
+
+  .heading {
     width: 100%;
     margin: 30px 0 20px 0;
     text-align: center;
@@ -72,58 +269,73 @@ const handleSubmit = (()=>{
     font-weight: bold;
     font-size: 2rem;
   }
-  .sub-heading{
+
+  .sub-heading {
     width: 100%;
     margin: 0 0 30px 0;
     text-align: center;
     font-weight: bold;
   }
-  .input-group{
+
+  .input-group {
     margin: 0 auto;
-    .input-sty{
+
+    .input-sty {
       width: 500px;
     }
-    .input-btn{
+
+    .input-btn {
       background-color: #3864ED;
       color: white;
       width: 100px !important;
       text-align: center !important;
-      .truncate{
+
+      .truncate {
         text-align: center;
         display: inline-block;
         width: 100%;
       }
     }
   }
-  .method-sty{
+
+  .method-sty {
     margin: 30px 0;
     display: flex;
     justify-content: space-between;
-    .left{
+
+    .left {
       margin-top: 50px;
-      h1{
+
+      h1 {
         font-weight: bold;
         font-size: 1.5rem;
       }
-      h2{
+
+      h2 {
         margin-top: 20px;
         font-size: 1.2rem;
       }
     }
-    .right{
+
+    .right {
       background-color: rgba(229, 240, 252, 0.42);
       padding: 0 150px 0 20px;
-      ul{
+
+      ul {
         width: 150%;
-        li{
+
+        li {
           width: 100%;
           margin: 20px 0 0 0;
           border-bottom: 1px solid #d5d5d5;
-          &:last-child{
+
+          &:last-child {
             border-bottom: none;
           }
+
           display: flex;
-          span{
+
+          span {
             width: 30px;
             height: 30px;
             text-align: center;
@@ -133,11 +345,13 @@ const handleSubmit = (()=>{
             background-color: red;
             border-radius: 40px;
             margin-top: -5px;
-            &:nth-child(1){
+
+            &:nth-child(1) {
               background-color: #3864ED;
             }
           }
-          p{
+
+          p {
             margin-left: 10px;
             padding: 0 0 20px 0;
           }
@@ -145,21 +359,26 @@ const handleSubmit = (()=>{
       }
     }
   }
-  .advantage{
+
+  .advantage {
     margin: 30px 0;
-    ul{
+
+    ul {
       display: flex;
       justify-content: space-between;
       width: 100%;
       flex-wrap: wrap;
-      li{
+
+      li {
         width: 40%;
-        p:nth-child(1){
+
+        p:nth-child(1) {
           font-weight: bold;
           font-size: 1.2rem;
           margin: 10px 0;
         }
-        p:nth-child(2){
+
+        p:nth-child(2) {
           font-size: 0.9rem;
           margin: 10px 0;
         }

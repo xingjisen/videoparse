@@ -1,0 +1,290 @@
+{
+  "header": {
+    "mode": {
+      "sepia": "切换护眼模式",
+      "light": "切换白天模式"
+    },
+    "title": {
+      "TikTok": "TikTok",
+      "Instagram": "Instagram",
+      "Twitter": "Twitter",
+      "DouYin": "DouYin",
+      "KuaiShou": "KuaiShou"
+    }
+  },
+  "content": {
+    "title": "从所有平台下载视频/提取图像",
+    "subTitle": "免费、快速、无需登录，支持100多个平台",
+    "TikTok": {
+      "title": "从所有TikTok下载视频/提取图像",
+      "subTitle": "最好用的TikTok视频下载器，可免费将TikTok视频转换为高质量的MP4或MP3格式",
+      "topLeft": "支持的TikTok链接格式",
+      "bottomLeft": ""
+    },
+    "Instagram": {
+      "title": "Instagram视频/图片下载",
+      "subTitle": "最好用的Instagram视频/图片下载器，可免费下载mp4格式的Instagram视频、Reels视频、IGTV视频，并支持照片、Story的下载。",
+      "topLeft": "支持的Instagram链接格式",
+      "bottomLeft": ""
+    },
+    "Twitter": {
+      "title": "Twitter视频/音频/图片下载",
+      "subTitle": "最好用的Twitter视频/音频/图片下载器，免费下载推特上的视频、音频、图片、GIF等文件",
+      "topLeft": "支持的Twitter链接格式",
+      "bottomLeft": ""
+    },
+    "DouYin": {
+      "title": "抖音视频下载",
+      "subTitle": "最好用的抖音视频下载器，可免费将DouYin视频转换为高质量的MP4或MP3格式",
+      "topLeft": "支持的抖音链接格式",
+      "bottomLeft": ""
+    },
+    "KuaiShou": {
+      "title": "快手视频下载器",
+      "subTitle": "快速轻松地使用我们易于使用的快手视频下载器，下载高质量的快手视频。",
+      "topLeft": "最好用的视频/图片下载器",
+      "bottomLeft": "没有限制,免登录使用"
+    },
+    "input": {
+      "placeholder": "请粘贴视频/图像链接",
+      "button": "提交"
+    },
+    "topLeft": "最好用的视频/图片下载器",
+    "bottomLeft": "没有限制,免登录使用",
+    "rightTop": {
+      "one": "复制可分享的视频/图集链接",
+      "two": "将链接粘贴到上面的输入框中",
+      "three": "点击视频/音频/图片下载按钮"
+    },
+    "desc": {
+      "one": "免费使用",
+      "oneSub": "解析和下载视频、音频、图片等文件无需任何费用。",
+      "two": "无次数限制",
+      "twoSub": "本站的解析和下载服务没有次数限制，您可以根据需要随意使用。",
+      "three": "无需注册",
+      "threeSub": "视频解析和下载可以直接使用，无需注册帐户或提供个人信息，充分简化了流程并尊重用户隐私。",
+      "four": "高清音视频",
+      "fourSub": "默认下载最高质量的视频，并根据情况提供HD、1080P、2K、4K等选择。"
+    },
+    "modal": {
+      "title": "视频列表",
+      "subTitle": "视频/图像标题:",
+      "cover": "封面",
+      "notVideoForm": "未找到可用视频格式",
+      "copySuccess": "已复制到剪切板",
+      "copyFail": "复制失败",
+      "download": "下载",
+      "urlError": "URL不正确",
+      "videoColumns": {
+        "resolution": "分辨率",
+        "ext": "文件格式",
+        "vcodec": "视频格式",
+        "acodec": "音频格式",
+        "dynamicRange": "视频动态范围",
+        "url": "地址",
+        "filesize": "文件大小",
+        "download": "下载"
+      }
+    }
+  },
+  "AppMiddle": {
+    "title": "支持的平台",
+    "Facebook": "Facebook",
+    "Twitter": "Twitter",
+    "Instagram": "Instagram",
+    "Telegram": "Telegram",
+    "TikTok": "TikTok",
+    "9GAG": "9GAG",
+    "Mashable": "Mashable",
+    "Linkedin": "Linkedin",
+    "Likee": "Likee",
+    "Kwai": "Kwai",
+    "Imgur": "Imgur",
+    "Imdb": "Imdb",
+    "Ifunny": "Ifunny",
+    "Gaana": "Gaana",
+    "Flickr": "Flickr",
+    "Febspot": "Febspot",
+    "Espn": "Espn",
+    "Akillitv": "Akillitv",
+    "Bandcamp": "Bandcamp",
+    "Bitchute": "Bitchute",
+    "Blogger": "Blogger",
+    "Blutv": "Blutv",
+    "Buzzfeed": "Buzzfeed",
+    "Dailymotion": "Dailymotion"
+  },
+  "Footer": {
+    "msg1": "本网站仅供个人使用，严禁下载受版权保护的材料，使用本网站即表示您同意我们的",
+    "msg2": "服务条款",
+    "msg3": "。对于本网站的任何版权侵权或滥用，您将承担全部责任。",
+    "faq": "常问问题",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "copyright": "版权声明",
+    "contact": "联系我们",
+    "ft": "保留所有权利。"
+  },
+  "FooterContent": {
+    "oneTit": "DownloadTheVideo.online是什么？",
+    "oneSub": "DownloadTheVideo.online是一个强大的在线工具，让用户可以从包括Facebook、VK、Twitter、Tiktok、Instagram等在内的100多个平台下载他们喜爱的视频。不论是音乐、电视节目、电影、短片还是个人上传的内容，DownloadTheVideo.online都可以帮助您随时随地以离线方式获取自己所喜爱的视频内容。",
+    "twoTit": "DownloadTheVideo.online支持哪些平台？",
+    "twoSub": "DownloadTheVideo.online支持100多个平台，涵盖包括Facebook、Twitter、Instagram、Tiktok、LinkedIn在内的各种社交网络，VK、Vimeo、Dailymotion等视频平台，Twitch等直播服务，Soundcloud和Bandcamp等音频服务，Imgur和Flickr等图片网络，Blogger和Tumblr等博客网站，Reddit等讨论板块，以及更多。因此，它涵盖了综合的方式，并考虑了用户多样的偏好。",
+    "threeTit": "使用DownloadTheVideo.online是免费的吗？",
+    "threeSub": "是的，DownloadTheVideo.online完全免费。我们理解获得数字内容的便利性的重要性，因此我们不希望将其束之高阁。您可以无需支付任何费用下载任意数量的视频。我们致力于提供一个对所有人都可访问的服务，不受社会经济约束和地域限制，使虚拟世界可在全球范围内访问。",
+    "fourTit": "使用DownloadTheVideo.online下载视频是否合法？",
+    "fourSub": "通常取决于您要下载的视频及其版权情况。虽然DownloadTheVideo.online为您提供了从各种平台检索视频的服务，但用户有责任尊重并遵守各个视频平台或内容创作者的版权政策。我们强烈建议仅将下载用于个人使用或为任何其他用途获得相应版权持有者的许可。",
+    "fiveTit": "视频下载不开始时该怎么办？",
+    "fiveSub": "首先，检查您的互联网连接，确保稳定。如果互联网连接没有问题，尝试刷新页面或重新启动Web浏览器。如果仍然遇到问题，请确保您使用的是最新版本的浏览器，或尝试更换其他浏览器。这是因为有时候某些浏览器可能存在限制或错误，导致下载出现问题。",
+    "sixTit": "可以期待什么样的视频质量？",
+    "sixSub": "下载的视频质量在很大程度上取决于原始上传视频的质量。如果原始视频支持高清或4K，您可以以相同质量下载视频。尽管DownloadTheVideo.online努力保持下载时的质量，但您必须明白转码视频（尤其是到不同格式）可能会对视频质量产生影响。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "titleSub": "在这里你可以找到问题的答案。",
+    "content": {
+      "oneTitle": "DownloadTheVideo.online 可以免费使用吗？",
+      "oneContent": "是的，DownloadTheVideo.online 是完全免费的并且将保持免费，但是因为它是免费的，所以我们使用广告来支付运行和维护这项服务的成本。",
+      "twoTitle": "我可以从 YouTube 下载视频吗？",
+      "twoContent": "不，不再支持从 YouTube 下载视频。",
+      "threeTitle": "支持哪些操作系统？",
+      "threeContent": "DownloadTheVideo.online 在线运行，因此支持所有操作系统，Windows、macOS、Linux、Android 或任何其他可以连接到互联网并下载文件的系统。",
+      "fourTitle": "我可以在手机和平板设备上使用 DownloadTheVideo.online 吗？",
+      "fourContent": "是的，DownloadTheVideo.online 适用于任何屏幕尺寸的设备，包括手机和平板设备。",
+      "fiveTitle": "支持哪些浏览器？",
+      "fiveContent": "我们仅支持现代浏览器，为确保您获得最佳体验，请下载并安装您最喜欢的浏览器的最新版本。",
+      "sixTitle": "尽管该网站被列为受支持，但我还是收到错误",
+      "sixContent": "首先请确保链接正确，同时确保您下载的视频不是私人的或需要登录才能观看，因为 DownloadTheVideo.online 无法下载此类视频，如果您仍然收到任何错误，请联系我们。",
+      "sevenTitle": "我可以只下载视频的音频吗？",
+      "sevenContent": "一些网站提供将显示在下载页面上的音频文件，如果您找不到任何音频下载按钮，那么您可以将视频转换为任何音频格式，如 MP3、M4A、WAV、AAC 等。",
+      "eightTitle": "我可以下载受版权保护的材料吗？",
+      "eightContent": {
+        "one": "不，您不能使用 DownloadTheVideo.online 下载受版权保护的材料，请查看",
+        "two": "服务条款",
+        "three": "以获取更多信息。"
+      }
+    }
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "上次更新时间：2025 年 02 月 10 日。",
+    "introduction": "您继续使用本网站即表示您接受这些服务条款。",
+    "sections": {
+      "title": "DownloadTheVideo.online 使用条款",
+      "content": {
+        "one": "本网站仅供个人使用。",
+        "two": "您只能在法律允许的范围内使用我们的网站作为录音服务。",
+        "three": "您不得使用我们的服务下载或转换任何受版权保护的材料。",
+        "four": "对于因使用我们的网站而发生的任何这些服务的误用以及任何版权侵权行为，您将承担全部责任。",
+        "five": "您有责任阅读您下载任何媒体的网站的服务条款，因为使用我们的服务可能会违反他们的服务条款。",
+        "six": "对于本网站提供的服务的任何误用以及因使用这些服务而可能发生的任何损害，我们概不负责。",
+        "seven": "我们保留随时修改这些条款的权利。",
+        "eight": "您继续使用本网站即表示您接受这些服务条款。"
+      }
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "上次更新时间：2025 年 02 月 10 日。",
+    "sections": {
+      "overview": {
+        "title": "概括",
+        "content": {
+          "one": "您可以匿名使用DownloadTheVideo.online，无需提供任何个人信息，但与大多数网站一样，我们会收集网络浏览器和网络服务器提供的非个人身份信息，这些信息仅用于更好地了解访问者如何使用我们的网站。",
+          "two": "我们还收集潜在的个人识别信息，例如您的 IP 地址（您计算机的互联网地址），目的是限制我们服务的使用，防止滥用并确保我们的服务可供所有人使用。",
+          "three": "除非我们服务的运行需要，否则我们不会在我们的服务器上存储任何个人信息，而且通常只会存储一段有限的时间，我们也不会与任何人分享您的个人信息。"
+        }
+      },
+      "autoCollectedInfo": {
+        "title": "自动收集的信息",
+        "content": {
+          "intro": "收集并由我们使用的第三方服务使用的一些信息：",
+          "ip": "IP 地址",
+          "browserType": "浏览器类型",
+          "dateTime": "每次请求的日期和时间",
+          "referrer": "引用网站",
+          "language": "语言偏好"
+        }
+      },
+      "cookie": {
+        "title": "Cookie",
+        "content": {
+          "one": "Cookie 是存储在您的计算机上的文本文件，我们使用 Cookie 帮助我们为您提供良好的体验、改善我们的服务以及个性化您在使用网站时可能向您提供的广告和内容，我们还使用利用 Cookie 的第三方服务来收集流量数据并提供广告服务。",
+          "two": {
+            "text": "我们通过使用 Google Analytics 收集网站访问者的匿名使用信息，Google Analytics 可能会使用跟踪 cookie 来收集匿名浏览器、操作系统、地理位置和网站导航信息，以选择退出 Google Analytics安装",
+            "link": {
+              "text": "Google Analytics 退出浏览器插件",
+              "url": "https://chromewebstore.google.com/detail/google-analytics%EF%BC%88%E5%88%86%E6%9E%90%EF%BC%89%E5%81%9C%E7%94%A8%E6%89%A9%E5%B1%95%EF%BC%88/fllaojicojecljbmefodhfapmkghcbnh?hl=zh_CN"
+            }
+          },
+          "three": {
+            "text": "我们通过 PropellerAds 提供广告，PropellerAds 使用 cookie 来投放相关广告，PropellerAds cookie 不会收集个人身份信息，您可以查看隐私政策页面了解更多信息，也可以使用此退出页面选择退出。",
+            "hidden": true
+          }
+        }
+      },
+      "links": {
+        "title": "链接",
+        "content": {
+          "one": "本网站可能包含其他网站的链接，请注意，我们对此类网站的内容或隐私不承担任何责任，我们鼓励您阅读收集个人身份信息的任何其他网站的隐私政策。"
+        }
+      },
+      "policyChanges": {
+        "title": "隐私政策变更",
+        "content": {
+          "one": "可能会在必要时更改其隐私政策，任何重大更改将在主页上明确发布通知，最后更新日期将显示在页面顶部。在本隐私政策发生任何变更后，您继续使用本网站即表示您接受此类变更。"
+        }
+      }
+    }
+  },
+  "copyright": {
+    "title": "版权政策",
+    "lastUpdated": "上次更新时间：2025 年 02 月 10 日。",
+    "content": {
+      "points": {
+        "one": "我们尊重他人的知识产权。",
+        "two": {
+          "text": "侵犯版权违反我们的",
+          "title": "服务条款",
+          "symbol": "。"
+        },
+        "three": "本网站用户不得下载或转换任何受版权保护的材料。",
+        "four": "我们可以自行决定删除任何我们有理由相信侵犯他人知识产权的内容。",
+        "five": "我们不受美国法律的约束，但我们自愿遵守《数字千年版权法》（DMCA）。依据美国法典第 17 章第 512(c)(2) 节。",
+        "six": {
+          "text": "如果您认为本网站侵犯了您的任何版权材料，请通过电子邮件发送通知至",
+          "note": "，确保所谓的侵权行为不受合理使用或言论自由等法律的保护。"
+        },
+        "seven": "为了有效，通知必须以书面形式传达，并包含以下内容：",
+        "requirements": {
+          "one": "拥有版权的人或代表所有者行事的授权人的物理或电子签名。",
+          "two": "识别声称被侵权的版权作品，请描述该作品并尽可能包含位置（URL）。",
+          "three": "对声称侵权或侵权活动主题的材料以及将被删除或禁止访问的材料的识别，以及足以让我们找到该材料的信息。",
+          "four": "可联系到您的地址、电话号码和电子邮件地址。",
+          "five": "一份声明，表明投诉方真诚地相信，以被投诉的方式使用该材料未经版权所有者、其代理人或法律的授权。",
+          "six": "一份声明，声明通知中的信息是准确的，并且根据伪证处罚规定，投诉方有权代表涉嫌侵权的独家权利所有者行事。",
+          "seven": "一份声明，声明通知中的信息是准确的，并且根据伪证处罚规定，投诉方有权代表涉嫌侵权的独家权利所有者行事。"
+        },
+        "eight": "所有与我们无关或根据法律无效的通知将不会得到回应或采取任何行动。"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "titleSub": "请向我们发送您的反馈或问题，我们将尽快回复您。",
+    "provider": {
+      "one": "联系表单由",
+      "two": "Formspree.io",
+      "three": "提供支持。"
+    },
+    "email": "您的电子邮件",
+    "theme": "主题",
+    "url": "视频链接(可选)",
+    "msg": "信息",
+    "button": "发送"
+  },
+  "fetch": {
+    "errorTitle": "错误",
+    "error": "抱歉，我们无法获取您的请求。"
+  }
+}

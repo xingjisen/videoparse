@@ -25,8 +25,6 @@ import org.dromara.common.satoken.utils.LoginHelper;
 import org.dromara.common.social.config.properties.SocialLoginConfigProperties;
 import org.dromara.common.social.config.properties.SocialProperties;
 import org.dromara.common.social.utils.SocialUtils;
-import org.dromara.common.sse.dto.SseMessageDto;
-import org.dromara.common.sse.utils.SseMessageUtils;
 import org.dromara.common.tenant.helper.TenantHelper;
 import org.dromara.system.domain.bo.SysTenantBo;
 import org.dromara.system.domain.vo.SysClientVo;
@@ -50,7 +48,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 认证
@@ -101,13 +98,13 @@ public class AuthController {
         // 登录
         LoginVo loginVo = IAuthStrategy.login(body, client, grantType);
 
-        Long userId = LoginHelper.getUserId();
-        scheduledExecutorService.schedule(() -> {
-            SseMessageDto dto = new SseMessageDto();
-            dto.setMessage("欢迎登录RuoYi-Vue-Plus后台管理系统");
-            dto.setUserIds(List.of(userId));
-            SseMessageUtils.publishMessage(dto);
-        }, 5, TimeUnit.SECONDS);
+//        Long userId = LoginHelper.getUserId();
+//        scheduledExecutorService.schedule(() -> {
+//            SseMessageDto dto = new SseMessageDto();
+//            dto.setMessage("欢迎登录RuoYi-Vue-Plus后台管理系统");
+//            dto.setUserIds(List.of(userId));
+//            SseMessageUtils.publishMessage(dto);
+//        }, 5, TimeUnit.SECONDS);
         return R.ok(loginVo);
     }
 
@@ -145,8 +142,8 @@ public class AuthController {
         StpUtil.checkLogin();
         // 获取第三方登录信息
         AuthResponse<AuthUser> response = SocialUtils.loginAuth(
-                loginBody.getSource(), loginBody.getSocialCode(),
-                loginBody.getSocialState(), socialProperties);
+            loginBody.getSource(), loginBody.getSocialCode(),
+            loginBody.getSocialState(), socialProperties);
         AuthUser authUserData = response.getData();
         // 判断授权响应是否成功
         if (!response.ok()) {

@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
-    <hamburger id="hamburger-container" :is-active="appStore.sidebar.opened" class="hamburger-container" @toggle-click="toggleSideBar" />
-    <breadcrumb v-if="!settingsStore.topNav" id="breadcrumb-container" class="breadcrumb-container" />
-    <top-nav v-if="settingsStore.topNav" id="topmenu-container" class="topmenu-container" />
+    <hamburger id="hamburger-container" :is-active="appStore.sidebar.opened" class="hamburger-container" @toggle-click="toggleSideBar"/>
+    <breadcrumb v-if="!settingsStore.topNav" id="breadcrumb-container" class="breadcrumb-container"/>
+    <top-nav v-if="settingsStore.topNav" id="topmenu-container" class="topmenu-container"/>
 
     <div class="right-menu flex align-center">
       <template v-if="appStore.device !== 'mobile'">
@@ -17,15 +17,17 @@
           @change="dynamicTenantEvent"
           @clear="dynamicClearEvent"
         >
-          <el-option v-for="item in tenantList" :key="item.tenantId" :label="item.companyName" :value="item.tenantId"> </el-option>
-          <template #prefix><svg-icon icon-class="company" class="el-input__icon input-icon" /></template>
+          <el-option v-for="item in tenantList" :key="item.tenantId" :label="item.companyName" :value="item.tenantId"></el-option>
+          <template #prefix>
+            <svg-icon icon-class="company" class="el-input__icon input-icon"/>
+          </template>
         </el-select>
 
         <!-- <header-search id="header-search" class="right-menu-item" /> -->
-        <search-menu ref="searchMenuRef" />
+        <search-menu ref="searchMenuRef"/>
         <el-tooltip content="搜索" effect="dark" placement="bottom">
           <div class="right-menu-item hover-effect" @click="openSearchMenu">
-            <svg-icon class-name="search-icon" icon-class="search" />
+            <svg-icon class-name="search-icon" icon-class="search"/>
           </div>
         </el-tooltip>
         <!-- 消息 -->
@@ -34,7 +36,7 @@
             <el-popover placement="bottom" trigger="click" transition="el-zoom-in-top" :width="300" :persistent="false">
               <template #reference>
                 <el-badge :value="newNotice > 0 ? newNotice : ''" :max="99">
-                  <svg-icon icon-class="message" />
+                  <svg-icon icon-class="message"/>
                 </el-badge>
               </template>
               <template #default>
@@ -43,31 +45,33 @@
             </el-popover>
           </div>
         </el-tooltip>
-        <el-tooltip content="Github" effect="dark" placement="bottom">
-          <ruo-yi-git id="ruoyi-git" class="right-menu-item hover-effect" />
-        </el-tooltip>
+        <!--        <el-tooltip content="Github" effect="dark" placement="bottom">-->
+        <!--          <ruo-yi-git id="ruoyi-git" class="right-menu-item hover-effect"/>-->
+        <!--        </el-tooltip>-->
 
-        <el-tooltip :content="proxy.$t('navbar.document')" effect="dark" placement="bottom">
-          <ruo-yi-doc id="ruoyi-doc" class="right-menu-item hover-effect" />
-        </el-tooltip>
+        <!--        <el-tooltip :content="proxy.$t('navbar.document')" effect="dark" placement="bottom">-->
+        <!--          <ruo-yi-doc id="ruoyi-doc" class="right-menu-item hover-effect"/>-->
+        <!--        </el-tooltip>-->
 
         <el-tooltip :content="proxy.$t('navbar.full')" effect="dark" placement="bottom">
-          <screenfull id="screenfull" class="right-menu-item hover-effect" />
+          <screenfull id="screenfull" class="right-menu-item hover-effect"/>
         </el-tooltip>
 
         <el-tooltip :content="proxy.$t('navbar.language')" effect="dark" placement="bottom">
-          <lang-select id="lang-select" class="right-menu-item hover-effect" />
+          <lang-select id="lang-select" class="right-menu-item hover-effect"/>
         </el-tooltip>
 
         <el-tooltip :content="proxy.$t('navbar.layoutSize')" effect="dark" placement="bottom">
-          <size-select id="size-select" class="right-menu-item hover-effect" />
+          <size-select id="size-select" class="right-menu-item hover-effect"/>
         </el-tooltip>
       </template>
       <div class="avatar-container">
         <el-dropdown class="right-menu-item hover-effect" trigger="click" @command="handleCommand">
           <div class="avatar-wrapper">
-            <img :src="userStore.avatar" class="user-avatar" />
-            <el-icon><caret-bottom /></el-icon>
+            <img :src="userStore.avatar" class="user-avatar"/>
+            <el-icon>
+              <caret-bottom/>
+            </el-icon>
           </div>
           <template #dropdown>
             <el-dropdown-menu>
@@ -94,9 +98,9 @@ import useAppStore from '@/store/modules/app';
 import useUserStore from '@/store/modules/user';
 import useSettingsStore from '@/store/modules/settings';
 import useNoticeStore from '@/store/modules/notice';
-import { getTenantList } from '@/api/login';
-import { dynamicClear, dynamicTenant } from '@/api/system/tenant';
-import { TenantVO } from '@/api/types';
+import {getTenantList} from '@/api/login';
+import {dynamicClear, dynamicTenant} from '@/api/system/tenant';
+import {TenantVO} from '@/api/types';
 import notice from './notice/index.vue';
 import router from '@/router';
 
@@ -106,7 +110,7 @@ const settingsStore = useSettingsStore();
 const noticeStore = storeToRefs(useNoticeStore());
 const newNotice = ref(<number>0);
 
-const { proxy } = getCurrentInstance() as ComponentInternalInstance;
+const {proxy} = getCurrentInstance() as ComponentInternalInstance;
 
 const userId = ref(userStore.userId);
 const companyName = ref(undefined);
@@ -143,7 +147,7 @@ const dynamicClearEvent = async () => {
 
 /** 租户列表 */
 const initTenantList = async () => {
-  const { data } = await getTenantList(true);
+  const {data} = await getTenantList(true);
   tenantEnabled.value = data.tenantEnabled === undefined ? true : data.tenantEnabled;
   if (tenantEnabled.value) {
     tenantList.value = data.voList;
@@ -195,7 +199,7 @@ watch(
   (newVal) => {
     newNotice.value = newVal.filter((item: any) => !item.read).length;
   },
-  { deep: true }
+  {deep: true}
 );
 </script>
 

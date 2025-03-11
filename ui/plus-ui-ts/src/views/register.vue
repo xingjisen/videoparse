@@ -2,18 +2,22 @@
   <div class="register">
     <el-form ref="registerRef" :model="registerForm" :rules="registerRules" class="register-form">
       <div class="title-box">
-        <h3 class="title">RuoYi-Vue-Plus多租户管理系统</h3>
-        <lang-select />
+        <h3 class="title">Aurora</h3>
+        <lang-select/>
       </div>
       <el-form-item v-if="tenantEnabled" prop="tenantId">
         <el-select v-model="registerForm.tenantId" filterable :placeholder="proxy.$t('register.selectPlaceholder')" style="width: 100%">
-          <el-option v-for="item in tenantList" :key="item.tenantId" :label="item.companyName" :value="item.tenantId"> </el-option>
-          <template #prefix><svg-icon icon-class="company" class="el-input__icon input-icon" /></template>
+          <el-option v-for="item in tenantList" :key="item.tenantId" :label="item.companyName" :value="item.tenantId"></el-option>
+          <template #prefix>
+            <svg-icon icon-class="company" class="el-input__icon input-icon"/>
+          </template>
         </el-select>
       </el-form-item>
       <el-form-item prop="username">
         <el-input v-model="registerForm.username" type="text" size="large" auto-complete="off" :placeholder="proxy.$t('register.username')">
-          <template #prefix><svg-icon icon-class="user" class="el-input__icon input-icon" /></template>
+          <template #prefix>
+            <svg-icon icon-class="user" class="el-input__icon input-icon"/>
+          </template>
         </el-input>
       </el-form-item>
       <el-form-item prop="password">
@@ -25,7 +29,9 @@
           :placeholder="proxy.$t('register.password')"
           @keyup.enter="handleRegister"
         >
-          <template #prefix><svg-icon icon-class="password" class="el-input__icon input-icon" /></template>
+          <template #prefix>
+            <svg-icon icon-class="password" class="el-input__icon input-icon"/>
+          </template>
         </el-input>
       </el-form-item>
       <el-form-item prop="confirmPassword">
@@ -37,7 +43,9 @@
           :placeholder="proxy.$t('register.confirmPassword')"
           @keyup.enter="handleRegister"
         >
-          <template #prefix><svg-icon icon-class="password" class="el-input__icon input-icon" /></template>
+          <template #prefix>
+            <svg-icon icon-class="password" class="el-input__icon input-icon"/>
+          </template>
         </el-input>
       </el-form-item>
       <el-form-item v-if="captchaEnabled" prop="code">
@@ -49,10 +57,12 @@
           style="width: 63%"
           @keyup.enter="handleRegister"
         >
-          <template #prefix><svg-icon icon-class="validCode" class="el-input__icon input-icon" /></template>
+          <template #prefix>
+            <svg-icon icon-class="validCode" class="el-input__icon input-icon"/>
+          </template>
         </el-input>
         <div class="register-code">
-          <img :src="codeUrl" class="register-code-img" @click="getCode" />
+          <img :src="codeUrl" class="register-code-img" @click="getCode"/>
         </div>
       </el-form-item>
       <el-form-item style="width: 100%">
@@ -67,22 +77,22 @@
     </el-form>
     <!--  底部  -->
     <div class="el-register-footer">
-      <span>Copyright © 2018-2024 疯狂的狮子Li All Rights Reserved.</span>
+      <span>Copyright © 2025</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { getCodeImg, register, getTenantList } from '@/api/login';
-import { RegisterForm, TenantVO } from '@/api/types';
-import { to } from 'await-to-js';
-import { useI18n } from 'vue-i18n';
+import {getCodeImg, getTenantList, register} from '@/api/login';
+import {RegisterForm, TenantVO} from '@/api/types';
+import {to} from 'await-to-js';
+import {useI18n} from 'vue-i18n';
 
-const { proxy } = getCurrentInstance() as ComponentInternalInstance;
+const {proxy} = getCurrentInstance() as ComponentInternalInstance;
 
 const router = useRouter();
 
-const { t } = useI18n();
+const {t} = useI18n();
 
 const registerForm = ref<RegisterForm>({
   tenantId: '',
@@ -106,21 +116,21 @@ const equalToPassword = (rule: any, value: string, callback: any) => {
 };
 
 const registerRules: ElFormRules = {
-  tenantId: [{ required: true, trigger: 'blur', message: t('register.rule.tenantId.required') }],
+  tenantId: [{required: true, trigger: 'blur', message: t('register.rule.tenantId.required')}],
   username: [
-    { required: true, trigger: 'blur', message: t('register.rule.username.required') },
-    { min: 2, max: 20, message: t('register.rule.username.length', { min: 2, max: 20 }), trigger: 'blur' }
+    {required: true, trigger: 'blur', message: t('register.rule.username.required')},
+    {min: 2, max: 20, message: t('register.rule.username.length', {min: 2, max: 20}), trigger: 'blur'}
   ],
   password: [
-    { required: true, trigger: 'blur', message: t('register.rule.password.required') },
-    { min: 5, max: 20, message: t('register.rule.password.length', { min: 5, max: 20 }), trigger: 'blur' },
-    { pattern: /^[^<>"'|\\]+$/, message: t('register.rule.password.pattern', { strings: '< > " \' \\ |' }), trigger: 'blur' }
+    {required: true, trigger: 'blur', message: t('register.rule.password.required')},
+    {min: 5, max: 20, message: t('register.rule.password.length', {min: 5, max: 20}), trigger: 'blur'},
+    {pattern: /^[^<>"'|\\]+$/, message: t('register.rule.password.pattern', {strings: '< > " \' \\ |'}), trigger: 'blur'}
   ],
   confirmPassword: [
-    { required: true, trigger: 'blur', message: t('register.rule.confirmPassword.required') },
-    { required: true, validator: equalToPassword, trigger: 'blur' }
+    {required: true, trigger: 'blur', message: t('register.rule.confirmPassword.required')},
+    {required: true, validator: equalToPassword, trigger: 'blur'}
   ],
-  code: [{ required: true, trigger: 'change', message: t('register.rule.code.required') }]
+  code: [{required: true, trigger: 'change', message: t('register.rule.code.required')}]
 };
 const codeUrl = ref('');
 const loading = ref(false);
@@ -136,7 +146,7 @@ const handleRegister = () => {
       const [err] = await to(register(registerForm.value));
       if (!err) {
         const username = registerForm.value.username;
-        await ElMessageBox.alert('<span style="color: red; ">' + t('register.registerSuccess', { username }) + '</font>', '系统提示', {
+        await ElMessageBox.alert('<span style="color: red; ">' + t('register.registerSuccess', {username}) + '</font>', '系统提示', {
           app: undefined,
           dangerouslyUseHTMLString: true,
           type: 'success'
@@ -154,7 +164,7 @@ const handleRegister = () => {
 
 const getCode = async () => {
   const res = await getCodeImg();
-  const { data } = res;
+  const {data} = res;
   captchaEnabled.value = data.captchaEnabled === undefined ? true : data.captchaEnabled;
   if (captchaEnabled.value) {
     codeUrl.value = 'data:image/gif;base64,' + data.img;
@@ -163,7 +173,7 @@ const getCode = async () => {
 };
 
 const initTenantList = async () => {
-  const { data } = await getTenantList(false);
+  const {data} = await getTenantList(false);
   tenantEnabled.value = data.tenantEnabled === undefined ? true : data.tenantEnabled;
   if (tenantEnabled.value) {
     tenantList.value = data.voList;
